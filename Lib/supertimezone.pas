@@ -1,3 +1,4 @@
+{ supertimezone.pas } // version: 2015.0727.0631
 unit supertimezone;
 
 {+}
@@ -306,7 +307,7 @@ end;
 
 class destructor TSuperTimeZone.Finish;
 begin
-  FCache.Free;
+  FreeAndNil(FCache);
   DeleteCriticalSection(FCacheCS);
 end;
 
